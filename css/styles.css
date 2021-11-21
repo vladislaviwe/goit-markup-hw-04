@@ -30,6 +30,10 @@ ul {
   padding: 0;
 }
 
+svg {
+  display: inline;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -56,6 +60,17 @@ button {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.whatwedo-title,
+.team-title,
+.client-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: var(--main-title-color);
 }
 
 /* ------------------------- Лого ----------------------------- */
@@ -113,7 +128,6 @@ button {
 
 .header-link,
 .contacts-link {
-  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -141,6 +155,22 @@ button {
 .contacts-item + .contacts-item {
   margin-left: 50px;
 }
+.contacts-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contacts-icon {
+  margin-right: 10px;
+  fill: var(--second-header-color);
+}
+
+.contacts-list a:hover svg {
+  fill: var(--accent-color);
+}
+.contacts-list a:focus svg {
+  fill: var(--accent-color);
+}
 
 /* ------------------------ Герой ----------------------------- */
 
@@ -148,7 +178,15 @@ button {
   padding: 200px 0;
   margin: 0 auto;
   max-width: 1600px;
-  background-color: #2f303a;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bcg-hero.jpg);
 }
 .hero-title {
   width: 696px;
@@ -198,6 +236,10 @@ button {
   display: flex;
 }
 
+.advantage-item {
+  width: 270px;
+}
+
 .advantage-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -217,6 +259,20 @@ button {
   color: var(--main-text-color);
 }
 
+.advantage-icons {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.advantage-icons svg {
+  display: block;
+}
+
 /* --------------------- Чем мы занимемся ---------------------- */
 
 .whatwedo-list {
@@ -228,16 +284,6 @@ button {
 }
 .whatwedo-item:not(:last-child) {
   margin-right: 30px;
-}
-
-.whatwedo-title,
-.team-title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  color: var(--main-title-color);
 }
 
 /* ------------------------- Наша команда------------------------ */
@@ -274,7 +320,7 @@ button {
   color: var(--main-title-color);
 }
 .team-item-text {
-  padding-bottom: 30px;
+  margin-bottom: 16px;
 
   font-weight: 400;
   font-size: 16px;
@@ -282,6 +328,82 @@ button {
   text-align: center;
 
   color: var(--main-text-color);
+}
+
+.team-social-list {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.team-social-item {
+  width: 44px;
+  height: 44px;
+}
+.team-social-item + .team-social-item {
+  margin-left: 10px;
+}
+
+.team-social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.team-social-link:hover svg,
+.team-social-link:focus svg {
+  fill: #ffffff;
+}
+
+.team-social-icon {
+  fill: #afb1b8;
+}
+
+/* --------------------------Постоянные клиенты----------------- */
+
+.clients-list {
+  display: flex;
+}
+
+.client-box {
+  width: 170px;
+  height: 92px;
+}
+
+.client-item + .client-item {
+  margin-left: 30px;
+}
+
+.client-icon {
+  fill: #afb1b8;
+}
+
+.clients-link:hover svg,
+.clients-link:focus svg {
+  fill: var(--accent-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
 
 /* ----------------------- Футер ------------------------------- */
@@ -310,6 +432,66 @@ button {
 }
 .address-list:last-child {
   padding-bottom: 60px;
+}
+
+.main-box {
+  display: flex;
+  justify-content: baseline;
+}
+
+.join-box {
+  padding-bottom: 100px;
+  margin-left: 70px;
+}
+
+.join-text {
+  padding-bottom: 20px;
+  padding-top: 72px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--second-footer-color);
+}
+
+.join-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.join-social-item {
+  width: 44px;
+  height: 44px;
+}
+.join-social-item + .join-social-item {
+  margin-left: 10px;
+}
+
+.join-social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.join-social-link:hover,
+.join-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.join-social-link:hover svg,
+.join-social-link:focus svg {
+  fill: #ffffff;
+}
+
+.join-social-icon {
+  fill: #ffffff;
 }
 
 /* ---------------------- Портфолио --------------------------- */
@@ -371,6 +553,11 @@ button {
 }
 .gallery-item:nth-child(3n) {
   margin-right: 0;
+}
+
+.gallery-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .gallery-title {
